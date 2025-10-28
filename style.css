@@ -1,0 +1,974 @@
+:root {
+    --color-fondo: #F8F1E6; 
+    --color-header-footer: #DBE767; 
+    --color-texto: #000000;
+    --color-rosa-display: #FFCDD6;
+}
+
+/* ESTILOS GENERALES */
+*, *::before, *::after {
+    box-sizing: border-box; 
+}
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HEADER Y NAVEGACIÓN (MÓVIL) */
+.header {
+    background-color: var(--color-header-footer);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: block;
+    font-size: 2em;
+}
+
+.nav-menu {
+    background-color: rgba(219, 231, 103, 0.95);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 60px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: block;
+    padding: 15px 20px;
+}
+
+.menu-toggle:checked ~ .nav-menu {
+    display: block;
+}
+
+/* CONTENIDO PRINCIPAL (MÓVIL) */
+.main-content {
+    min-height: calc(100vh - 120px); 
+    padding: 0; 
+}
+
+/* Contenedor Rosa (Móvil: Todos los elementos apilados) */
+.seccion-inicio {
+    background-color: var(--color-rosa-display);
+    display: block; 
+    margin: 0;
+    padding: 40px 20px; 
+}
+
+/* Estilos de Tipografía (dentro de la columna-texto) */
+.titulo-principal {
+    color: #000;
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    font-weight: normal;
+    letter-spacing: -2px; 
+    line-height: 1; 
+    margin-bottom: -20px; 
+    text-align: left;
+}
+
+/* Título de la sección UX/UI */
+.titulo-uxui {
+    color: #000;
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.subtitulo-gogo {
+    color: #000;
+    font-family: 'Young Serif', serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 20px; 
+    margin-left: 50px; 
+    margin-top: 0; 
+    text-align: left;
+}
+
+/* Párrafo de la Biografía (dentro de la columna-texto) */
+.bio-text {
+    margin: 0; 
+    padding: 0;
+    padding-bottom: 20px; 
+}
+
+/* Imagen (Móvil: Centrada y apilada) */
+.imagen-bio {
+    margin-bottom: 30px; 
+    margin-top: 30px; 
+}
+
+.imagen-bio img {
+    display: block; 
+    height: auto;
+    margin: 0 auto; 
+    max-width: 100%;
+    width: 50%; 
+}
+
+
+/* SECCIÓN DE SERVICIOS - ¿Qué puedo hacer por ti? (Móvil) */
+.seccion-servicios {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px 100px 20px; 
+}
+
+.titulo-servicios {
+    color: var(--color-texto);
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    font-weight: normal;
+    line-height: 1; 
+    margin-bottom: 20px; 
+    margin-top: 0; 
+    text-align: left;
+}
+
+.subtitulo-categoria {
+    font-family: 'Young Serif', serif; 
+    font-size: 1.8rem;
+    font-weight: normal; 
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.categoria-servicio ul {
+    list-style-type: none; 
+    padding-left: 0; 
+}
+
+.categoria-servicio ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    padding-left: 1.5em; 
+    position: relative;
+}
+
+.categoria-servicio ul li:before {
+    background-color: var(--color-texto);
+    border-radius: 50%;
+    content: '';
+    height: 6px;
+    left: 0;
+    position: absolute;
+    top: 0.5em;
+    width: 6px;
+}
+
+
+/* SECCIÓN DE PROYECTOS (MÓVIL) */
+.seccion-proyectos {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px; 
+}
+
+.proyectos-contenedor {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+.titulo-proyectos {
+    color: var(--color-texto);
+    font-family: "Young Serif", Arial, sans-serif;
+    font-size: 2.5rem; 
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 0;
+    text-align: left;
+}
+
+/* === TARJETAS DE PROYECTOS === */
+.tarjeta-proyecto {
+    background-color: var(--color-rosa-display); 
+    border-radius: 5px;
+    display: flex; 
+    flex-direction: column; 
+    margin-bottom: 30px; 
+    overflow: hidden; 
+}
+
+/* Columna de Imagen */
+.imagen-proyecto {
+    align-items: center;
+    display: flex;
+    height: 150px; 
+    justify-content: center;
+    
+}
+
+
+.logo-placeholder, .logo-placeholder-negro {
+    color: white;
+    font-family: 'Young Serif', serif;
+    font-size: 2.5rem; 
+    text-align: center; 
+}
+.logo-placeholder-negro {
+    color: var(--color-texto);
+}
+
+
+/* Columna de Información */
+.info-proyecto {
+    padding: 20px; 
+}
+
+.nombre-proyecto {
+    color: var(--color-texto);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.descripcion-proyecto {
+    color: var(--color-texto);
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Botón Ver */
+.boton-proyecto {
+    background-color: #D3437D; 
+    border-radius: 3px;
+    color: white;
+    display: block;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+.boton-proyecto:hover {
+    background-color: #B53A68;
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--color-header-footer);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+
+/* MEDIA QUERY PARA TABLETAS Y ESCRITORIO */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none; 
+    }
+
+    .nav-menu {
+        background-color: transparent;
+        border: none;
+        display: block; 
+        position: static;
+    }
+
+    .nav-menu ul {
+        display: flex; 
+    }
+
+    .nav-menu li a {
+        border-bottom: none;
+        padding: 0 15px;
+    }
+    
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* === AJUSTES DE COLUMNAS - SECCIÓN SOBRE MÍ (ROSA) Y UX/UI === */
+    .seccion-inicio {
+        background-color: var(--color-rosa-display);
+        padding: 60px 0 20px 0; 
+        margin: 0;
+        display: block; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Contenedor INTERNO (el div añadido en el HTML) */
+    .seccion-inicio > div { 
+        max-width: 1200px; 
+        margin: 0 auto;
+        padding: 0 80px; 
+        
+        display: flex;
+        justify-content: space-between; 
+        align-items: flex-start;
+    }
+
+    /* 2. Columna de Texto */
+    .columna-texto {
+        display: block; 
+        flex-basis: 60%; 
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 20px; 
+        padding-left: 0;
+        padding-right: 0; 
+    }
+    
+    .bio-text {
+        margin-bottom: 0 !important;
+        margin-top: 0;
+    }
+
+    /* Forzamos la alineación del subtítulo (Solo para la portada '¡SOY GOGO!') */
+    .subtitulo-gogo {
+        margin-bottom: 10px; 
+        margin-left: 0 !important; 
+    }
+    
+    .titulo-principal, .bio-text, .titulo-uxui {
+        margin-left: 0;
+    }
+    
+    /* 3. Columna de Imagen */
+    .imagen-bio {
+        flex-basis: 25%; 
+        margin: 0 0 0 0; 
+        text-align: right; 
+    }
+
+    .imagen-bio img {
+        display: block; 
+        height: auto;
+        margin: 0 auto; 
+        margin-bottom: 85px;
+        max-width: 100%;
+        width: 80%; 
+    }
+
+    /* === AJUSTES DE COLUMNAS - SECCIÓN DE SERVICIOS === */
+    .seccion-servicios {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 60px;
+        justify-content: space-between; 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 0 80px 100px 80px; 
+    }
+    
+    .titulo-servicios {
+        margin-bottom: 20px;
+        margin-top: 0 !important; 
+        padding: 0;
+        width: 100%;
+
+    }
+
+    .categoria-servicio {
+        flex-basis: calc(50% - 30px); 
+    }
+    
+    /* === AJUSTES DE COLUMNAS - SECCIÓN DE PROYECTOS === */
+    
+    .seccion-proyectos {
+        padding: 60px 80px; 
+    }
+    
+    .tarjeta-proyecto {
+        flex-direction: row; 
+        align-items: stretch; 
+        margin-bottom: 30px; 
+    }
+    
+    /* Columna Contenedora de Imagen/Logo del Proyecto */
+    .imagen-proyecto {
+        flex-basis: 35%; 
+        height: auto; 
+        padding: 0; 
+        box-sizing: border-box; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Estilo del Logo Placeholder (El bloque de color con el texto) */
+    .imagen-proyecto > .logo-placeholder, .imagen-proyecto > .logo-placeholder-negro {
+        padding: 20px; 
+        width: 100%; 
+        height: 100%; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        box-sizing: border-box; 
+        text-align: center; 
+    }
+
+    
+    /* Columna de Información del Proyecto */
+    .info-proyecto {
+        flex-basis: 65%; 
+        padding: 20px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        box-sizing: border-box;
+    }
+    
+    .nombre-proyecto, .descripcion-proyecto {
+        margin-bottom: 10px; 
+    }
+
+
+    /* Ajuste final del botón */
+    .boton-proyecto {
+        width: 150px; 
+        align-self: flex-start; 
+        margin-top: auto; 
+    }
+}
+
+
+/* ESTILOS ESPECÍFICOS: PROYECTO VOILÀ */
+
+/* === ESTRUCTURA Y CONTENIDO === */
+.seccion-proyecto-detalle {
+    background-color: var(--color-fondo);
+    padding: 40px 20px; 
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.contenedor-proyecto-detalle {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* === TIPOGRAFÍA === */
+.titulo-proyecto-detalle {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem; 
+    font-weight: normal;
+    color: var(--color-texto);
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 5px; 
+}
+
+.subtitulo-cursive {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem; 
+    display: block; 
+    margin-top: -10px; 
+}
+
+.texto-proyecto-detalle {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: var(--color-texto);
+    text-align: justify;
+    max-width: 700px; 
+    
+}
+
+/* === CARRUSEL DE IMÁGENES (Ajustes Estrictos y Corregidos) === */
+.carrusel-contenedor {
+    max-width: 90%;
+    margin: 20px auto 40px auto;
+    background-color: var(--color-rosa-display);
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; 
+    padding: 0;
+    
+}
+
+/* === CENTRADO DE IMÁGENES EN EL CARRUSEL === */
+.carrusel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-track img {
+    flex-shrink: 0;
+    width: 100%;
+    max-height: 400px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    align-self: center;
+}
+
+
+
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.carrusel-btn.prev {
+    left: 10px; 
+}
+
+.carrusel-btn.next {
+    right: 10px; 
+}
+
+.carrusel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.carrusel-dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carrusel-dot.active {
+    background-color: var(--color-texto);
+}
+
+/* === ENLACE AL PROYECTO COMPLETO === */
+.link-proyecto-completo {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px; 
+    margin-bottom: 20px;
+}
+
+.enlace-completo {
+    background-color: #F8F1E6; 
+    color: #CC3363;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid #CC3363; 
+}
+
+.enlace-completo:hover {
+    background-color: #CC3363; 
+    color: #F8F1E6; 
+    border: 2px solid #F8F1E6; 
+}
+
+/* ESTILOS ESPECÍFICOS: CV (VERSIÓN ROSA UNIFICADA) */
+
+/* Contenedor principal para la sección del CV - Mantiene el fondo principal (beige) */
+.seccion-cv-contenedor {
+    padding: 60px 20px; 
+    max-width: 100%;
+    margin: 0 auto;
+    min-height: calc(100vh - 120px); 
+}
+
+/* Contenedor ÚNICO ROSA para todo el CV */
+.cv-contenedor-rosa {
+    background-color: var(--color-rosa-display); 
+    padding: 40px 20px; 
+    border-radius: 5px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estructura de 2 columnas para el CV (Escritorio) */
+.cv-grid {
+    display: flex;
+    flex-direction: column; 
+    gap: 40px;
+    margin-top: 40px; 
+}
+
+/* Título principal del CV */
+.titulo-cv {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* === IMAGEN DE CV (Igual que 'Gogo' en el inicio) === */
+.cv-imagen-principal {
+    margin-bottom: 30px; 
+    margin-top: 30px; 
+}
+
+.cv-imagen-principal img {
+    display: block; 
+    height: auto;
+    margin: 0 auto; 
+    max-width: 100%;
+    width: 50%; 
+    
+}
+
+/* Estilos de los títulos de sección (FORMACIÓN, HABILIDADES...) */
+.cv-titulo-seccion {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 35px;
+    margin-top: 30px;
+}
+
+/* Estilos para el texto de contacto */
+.cv-contacto-item {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.cv-contacto-item span {
+    margin-right: 10px;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para los SVG, asegurando que usen el color del texto */
+.cv-contacto-item span svg {
+    width: 20px; 
+    height: 20px; 
+    stroke: var(--color-texto); 
+}
+
+/* === HABILIDADES TÉCNICAS (PICTOGRAMAS) === */
+.cv-habilidades-tecnicas-contenedor {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    margin-bottom: 30px;
+}
+
+/* Fila específica para los iconos */
+.cv-habilidades-iconos {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    align-items: center;
+}
+
+.cv-habilidades-iconos img {
+    width: 50px; 
+    height: 50px;
+}
+
+/* Nuevo estilo para los créditos */
+.cv-icon-creditos {
+    font-size: 0.75rem; 
+    line-height: 1.4;
+    color: #444; 
+    margin-top: 10px; 
+}
+
+.cv-icon-creditos a {
+    text-decoration: underline;
+    color: inherit; 
+}
+
+/* ESTILOS ESPECÍFICOS: CONTACTO */
+
+/* Contenedor principal para la página de contacto (Fondo Beige) */
+.seccion-contacto {
+    background-color: var(--color-fondo);
+    padding: 0; 
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* Contenedor Interior (Fondo Verde/Lima) */
+.contenedor-contacto-verde {
+    background-color: #FFCDD6;
+    padding: 40px 20px 60px 20px; 
+    max-width: 500px; 
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+/* Títulos de Contacto */
+.contacto-header {
+    margin-bottom: 40px;
+}
+
+.titulo-contacto {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: -15px; 
+    text-align: center;
+}
+
+.subtitulo-contacto {
+    font-family: "Young Serif", Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Imagen Central (Reutiliza estilos de .imagen-bio) */
+.contacto-imagen {
+    margin-bottom: 50px; 
+    
+}
+
+.contacto-imagen img {
+    display: block; 
+    height: auto;
+    margin: 0 auto; 
+    max-width: 100%;
+    width: 65%; 
+}
+
+/* Lista de Contacto */
+.lista-contacto {
+    max-width: 300px; 
+    margin: 0 auto;
+    text-align: left; 
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+.contacto-item span {
+    margin-right: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para los SVG (íconos) */
+.contacto-item span svg {
+    width: 20px; 
+    height: 20px; 
+    stroke: var(--color-texto); 
+}
+
+/* MEDIA QUERY PARA ESCRITORIO */
+@media (min-width: 768px) {
+    .contenedor-contacto-verde {
+        max-width: 1000px; 
+        padding: 80px 40px 100px 40px; 
+        margin-top: 60px; 
+        margin-bottom: 60px; 
+        border-radius: 5px;
+    }
+    
+    .titulo-contacto {
+        font-size: 6rem;
+    }
+    
+    .contacto-imagen img {
+        width: 50%; 
+    }
+}
+/* === MEDIA QUERY PARA ESCRITORIO === */
+@media (min-width: 768px) {
+    
+    .seccion-cv-contenedor {
+        padding: 60px 80px; 
+    }
+    
+    .cv-contenedor-rosa {
+        padding: 60px 80px; 
+    }
+    
+    .titulo-cv {
+        text-align: left;
+        margin-left: 0;
+    }
+    
+    .cv-grid {
+        flex-direction: row; 
+        align-items: flex-start; 
+        margin-top: 60px;
+    }
+
+    .cv-columna-izquierda {
+        flex-basis: 40%; 
+        padding-right: 20px;
+    }
+
+    .cv-columna-derecha {
+        flex-basis: 60%; 
+        padding-left: 20px;
+    }
+    
+    /* En escritorio, la imagen de CV va a la izquierda */
+    .cv-imagen-principal {
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    
+    .cv-imagen-principal img {
+        margin: 0; 
+        width: 100%; 
+    }
+    
+
+/* Media Query para tabletas y escritorio */
+@media (min-width: 768px) { 
+    .seccion-proyecto-detalle {
+        padding: 60px 80px; 
+    }
+
+    .titulo-proyecto-detalle {
+        font-size: 6rem; 
+    }
+
+    .subtitulo-cursive {
+        font-size: 4rem; 
+        margin-top: -20px;
+    }
+
+    .texto-proyecto-detalle {
+        font-size: 1.2rem;
+    }
+
+    .carrusel-contenedor {
+        max-width: 800px;
+        padding: 20px; 
+    }
+    
+    .carrusel-track img {
+        padding: 0; 
+        max-height: 400px;
+    }
+    
+    .carrusel-btn.prev {
+        left: 30px; 
+    }
+
+    .carrusel-btn.next {
+        right: 30px; 
+    }
+    .seccion-cv {
+        padding: 60px 80px; 
+    }
+    
+    .cv-grid {
+        flex-direction: row; 
+        align-items: flex-start; 
+    }
+
+    .cv-columna-izquierda {
+        flex-basis: 40%; 
+        padding-right: 20px;
+    }
+
+    .cv-columna-derecha {
+        flex-basis: 60%; 
+        padding-left: 20px;
+    }
+    
+    .titulo-cv {
+        text-align: left;
+        margin-left: -5px; 
+    }
+    
+    .cv-bloque-izquierda {
+        margin-bottom: 0; 
+    }
+    
+    .cv-bloque-contacto {
+        margin-top: auto; 
+    }
+    
+    .cv-columna-izquierda {
+        display: flex;
+        flex-direction: column;
+        height: 100%; 
+    }
+    
+}
+}
